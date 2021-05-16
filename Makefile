@@ -145,6 +145,7 @@ crosstool-NG/ct-ng: crosstool-NG/bootstrap
 	$(MAKE) -C crosstool-NG -f ../Makefile _ct-ng
 
 _ct-ng:
+	git apply ../0001-fix-crosstoolng-ubuntu-20.patch
 	./bootstrap
 	./configure --prefix=`pwd`
 	$(MAKE) MAKELEVEL=0
